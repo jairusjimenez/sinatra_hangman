@@ -1,5 +1,5 @@
 require "sinatra"
-#require "sinatra/reloader"
+require "sinatra/reloader"
 
 use Rack::Session::Cookie, :key => 'rack.session',
                            :path => '/',
@@ -47,7 +47,7 @@ helpers do
 		end
 		@secret_word = valid_words[rand(valid_words.length + 1)].chomp
 		@secret_word = @secret_word.split("")
-		@secret_word_hidden = "_" * (@secret_word.length)
+		@secret_word_hidden = "-" * (@secret_word.length)
 	end
 
 	def eval_answer(input)
