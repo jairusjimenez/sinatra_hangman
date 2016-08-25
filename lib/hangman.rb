@@ -1,5 +1,5 @@
 require "sinatra"
-require "sinatra/reloader"
+#require "sinatra/reloader"
 
 use Rack::Session::Cookie, :key => 'rack.session',
                            :path => '/',
